@@ -1,9 +1,12 @@
 <h1>Tasks#show</h1>
 <p>Find me in app/views/tasks/show.html.erb</p>
-
+<%= link_to 'bask to list', tasks_path%>
 <h3><%= @task.name %></h3>
 <ul>
   <li><%= @task.description%></li>
   <li><%= @task.state%></li>
   <li><%= @task.due_date%></li>
+
+  <%= link_to "edit", edit_task_path(@task.id)%>
+  <%= link_to 'delete', task_path , method: :delete %>
 </ul>
