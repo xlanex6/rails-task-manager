@@ -3,6 +3,10 @@ class TasksController < ApplicationController
     @task = Task.all
   end
 
+  def show
+    @task = Task.find(params[:id])
+  end
+
   def create
   end
 
@@ -12,12 +16,11 @@ class TasksController < ApplicationController
   def edit
   end
 
-  def show
-  end
 
   def update
   end
 
   def destroy
   end
+
 end
